@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <p id="p1">In the second round of this game you will be guessing a number between 1 and 100.</p>
+    <div class="DIV1">
+        <label for="name">Type Here-</label>
+    <input type="number" id="input1" name="name" >
+    <button type="button" onclick="button1()" id="hehe">Try</button>
+
+    </div>
+    <h1 id="try"></h1>
+    <button type="button" id="hiddenb" onclick="hiddenb()">Yes</button>
+    <button type="button" id="hiddenb1" onclick="hiddenb1()">No</button>
+    <div class="span">
+        <h1 class="mba"><hr>MADE BY ABHINAV</h1>
+       </div>
+    <script>
+        
+        document.getElementById("hiddenb").style.display = "none";
+        document.getElementById("hiddenb1").style.display = "none";
+        function button1(){
+            let y= document.getElementById("p1").innerHTML
+         let x = Math.floor((Math.random() * 100) + 1);
+         let b = document.getElementById("input1").value
+         if (x==b) {
+            document.getElementById("p1").innerHTML="You guessed it right!"
+            document.getElementById("try").innerHTML="Try Again ?"
+         } else {
+            document.getElementById("p1").innerHTML="You guessed it wrong!"
+            document.getElementById("try").innerHTML="Try Again ?"
+         
+        }
+        document.getElementById("hiddenb").style.display = "block";
+        document.getElementById("hiddenb1").style.display = "block";
+        document.getElementById("hehe").style.display = "none";
+    }
+    function hiddenb(){
+        window.location.replace("this webpage")
+        document.getElementById("hehe").style.display = "block";
+    }
+    function hiddenb1(){
+        window.location.replace("start page")
+    }
+        
+
+    </script>
+</body>
+</html>
